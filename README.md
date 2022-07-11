@@ -3,7 +3,6 @@
 Run as admin
 ```powershell
 curl -o install.ps1 "https://raw.githubusercontent.com/PacketAI/winlogbeat-installation/main/install.ps1"
-.\install.ps1 -clusterName "" -infra "" -token ""
 ```
 ## Configure the winlogbeat
 - you need to go to the [web interface](https://app-gcpdev.packetai.co/deploy/agent) to find your token named `X_PAI_TOKEN` and infra named `PAI_API_KEY`
