@@ -283,7 +283,7 @@ output.elasticsearch:
   protocol: https
   path: /elasticsearch/wlb
   compression_level: 9
-  index: "es.61af40d4d639300012970d44-proxiteam-log-windows-raw"
+  index: "es.62cbf03546980a0012d79569-proxiteam-log-windows-raw"
   headers:
     X-PAI-IID: 62cbf03546980a0012d79569
     X-PAI-TOKEN: ${PLEASE_FIND_IT_IN_WEB_INTERFACE}
