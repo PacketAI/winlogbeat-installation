@@ -7,11 +7,11 @@ mv .\wlb\winlogbeat-8.3.2-windows-x86_64\ .\winlogbeat\
 rm -r .\wlb
 rm .\wlb.zip
 cd .\winlogbeat
-# curl -o winlogbeat.yaml "https://raw.githubusercontent.com/PacketAI/winlogbeat-installation/main/example.config.wlb.yaml"
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/PacketAI/winlogbeat-installation/main/example.config.wlb.yaml -OutFile winlogbeat.yaml
-(Get-Content winlogbeat.yaml) -Replace '\$\{X-PAI-IID\}', $infra | Set-Content winlogbeat.yaml
-(Get-Content winlogbeat.yaml) -Replace '\$\{CLUSTER_NAME\}', $clustername | Set-Content winlogbeat.yaml
-(Get-Content winlogbeat.yaml) -Replace '\$\{X-PAI-TOKEN\}', $token | Set-Content winlogbeat.yaml
+# curl -o winlogbeat.yml "https://raw.githubusercontent.com/PacketAI/winlogbeat-installation/main/example.config.wlb.yml"
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/PacketAI/winlogbeat-installation/main/example.config.wlb.yml -OutFile winlogbeat.yml
+(Get-Content winlogbeat.yml) -Replace '\$\{X-PAI-IID\}', $infra | Set-Content winlogbeat.yml
+(Get-Content winlogbeat.yml) -Replace '\$\{CLUSTER_NAME\}', $clustername | Set-Content winlogbeat.yml
+(Get-Content winlogbeat.yml) -Replace '\$\{X-PAI-TOKEN\}', $token | Set-Content winlogbeat.yml
 
 .\install-service-winlogbeat.ps1
 Start-Service winlogbeat
