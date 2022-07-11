@@ -283,10 +283,10 @@ output.elasticsearch:
   protocol: https
   path: /elasticsearch/wlb
   compression_level: 9
-  index: "es.62cbf03546980a0012d79569-proxiteam-log-windows-raw"
+  index: "es.${X-PAI-IID}-proxiteam-log-windows-raw"
   headers:
-    X-PAI-IID: 62cbf03546980a0012d79569
-    X-PAI-TOKEN: ${PLEASE_FIND_IT_IN_WEB_INTERFACE}
+    X-PAI-IID: ${X-PAI-IID}
+    X-PAI-TOKEN: ${X-PAI-TOKEN}
 
 # ================================= Processors =================================
 processors:
@@ -296,7 +296,7 @@ processors:
 
   - add_fields:
       fields:
-        clusterName: proxiteam
+        clusterName: ${CLUSTER_NAME}
       target: fields
 
 

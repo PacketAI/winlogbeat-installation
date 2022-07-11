@@ -6,4 +6,7 @@ rm -r .\wlb
 rm .\wlb.zip
 cd .\winlogbeat
 curl -o winlogbeat.yaml "https://raw.githubusercontent.com/PacketAI/winlogbeat-installation/main/example.config.wlb.yaml"
-
+param ($clustername, $infra, $token)
+(Get-Content winlogbeat.yaml) -Replace '${X-PAI-IID}', $infra | Set-Content winlogbeat.yaml
+(Get-Content winlogbeat.yaml) -Replace '${CLUSTER_NAME}', $clustername | Set-Content winlogbeat.yaml
+(Get-Content winlogbeat.yaml) -Replace '${X-PAI-TOKEN}', $token | Set-Content winlogbeat.yaml
