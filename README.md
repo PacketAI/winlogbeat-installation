@@ -22,3 +22,8 @@ Start-Service winlogbeat
 ```
 
 
+## Debug
+Logs are by default in the following path
+```powershell
+C:\Program Files\Vector\config
+```
