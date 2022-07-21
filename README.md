@@ -30,3 +30,10 @@ Logs are by default in the following path
 ```powershell
 C:\ProgramData\winlogbeat\Logs
 ```
+## FAQ
+- TLS Issue
+    ```powershell
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    ```
+- 
+
