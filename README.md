@@ -39,8 +39,14 @@ C:\ProgramData\winlogbeat\Logs
 ```
 ## FAQ
 - TLS Issue
-    ```powershell
-    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-    ```
-- 
+```powershell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+```
+- Port and endpoint used
+Port: 443  
+Endpoint: `beats-ingester-gcpdev.packetai.co`
+```yaml
+hosts: ["beats-ingester-gcpdev.packetai.co:443"]
+protocol: https
+```
 
