@@ -1,4 +1,3 @@
-param ($clustername, $infra, $token)
 $ProgressPreference = 'SilentlyContinue'
 # curl -o wlb.zip  https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-8.3.2-windows-x86_64.zip
 Invoke-WebRequest -Uri https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-8.3.2-windows-x86_64.zip -OutFile wlb.zip
