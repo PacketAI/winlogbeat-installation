@@ -13,7 +13,7 @@ Run as admin in the winlogbeat folder
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/PacketAI/winlogbeat-installation/main/generate-config.ps1" -OutFile generate-config.ps1
 ```
 ## Configure the winlogbeat
-- you need to go to the [web interface](https://app-gcpdev.packetai.co/deploy/agent) to find your token 
+- you need to go to the [web interface](https://app-talentsia.packetai.co/deploy/agent) to find your token 
 - run the script with infra and token found in the step above and a cluster name you choose matching regex [a-z0-9]
 ```powershell
 .\generate-config.ps1 -clustername "" -infra "" -token ""
@@ -44,9 +44,9 @@ C:\ProgramData\winlogbeat\Logs
 ```
 - Port and endpoint used
 Port: 443  
-Endpoint: `beats-ingester-gcpdev.packetai.co`
+Endpoint: `beats-ingester-talentsia.packetai.co`
 ```yaml
-hosts: ["beats-ingester-gcpdev.packetai.co:443"]
+hosts: ["beats-ingester-talentsia.packetai.co:443"]
 protocol: https
 ```
 

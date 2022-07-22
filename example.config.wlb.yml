@@ -16,7 +16,7 @@ setup.ilm.enabled: false
 output.elasticsearch:
   # Array of hosts to connect to.
   allow_older_versions: true
-  hosts: ["beats-ingester-gcpdev.packetai.co:443"]
+  hosts: ["beats-ingester-talentsia.packetai.co:443"]
   protocol: https
   path: /elasticsearch/wlb
   compression_level: 9
